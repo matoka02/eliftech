@@ -6,6 +6,7 @@ import { getInfoPeople } from '../../mockAPI';
 import Loader from '../../components/Loader/Loader';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import PeopleInfo from '../../components/PeopleInfo/PeopleInfo';
+import css from './PeopleDetails.module.css';
 
 const PeopleDetails = () => {
   const { eventId } = useParams();
@@ -68,22 +69,27 @@ const PeopleDetails = () => {
 
   return (
     <div>
-      <Link to={backLink.current} >Go back {' '}</Link>
-      <form onSubmit={(evt) => {
-        evt.preventDefault();
-        submitOwnerFilter(query.trim());
-        setQuery('');
-      }}>
+      <Link to={backLink.current} className={css.linkGoBack}>Go back {' '}</Link>
+      <form
+        onSubmit={(evt) => {
+          evt.preventDefault();
+          submitOwnerFilter(query.trim());
+          setQuery('');
+        }}
+        className={css.form}
+      >
         <input
           type='text'
           value={query}
           onChange={(evt) => { setQuery(evt.target.value) }}
-          name='search' />
-        <button type='submit'>Search</button>
+          name='search'
+          className={css.input}
+        />
+        <button type='submit' className={css.button}>Search</button>
       </form>
 
       {isLoading && <Loader />}
-      <ul>
+      <ul className={css.list}>
         {people.length > 0 && people.map((infoPeople, index) => (
           <PeopleInfo key={index} info={infoPeople} />
         ))}

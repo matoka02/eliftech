@@ -6,6 +6,7 @@ import { getSearchPeople } from '../../mockAPI';
 import Loader from '../../components/Loader/Loader';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import SearchList from '../../components/SearchList/SearchList';
+import css from './PeopleSearch.module.css';
 
 const PeopleSearch = () => {
   const [search, setSearch] = useState('');
@@ -63,16 +64,20 @@ const PeopleSearch = () => {
 
   return (
     <>
-      <form onSubmit={(evt) => {
-        evt.preventDefault();
-        submitOwnerFilter(search)
-      }}>
+      <form
+        onSubmit={(evt) => {
+          evt.preventDefault();
+          submitOwnerFilter(search)
+        }}
+        className={css.form}>
         <input
           type='text'
           value={search}
           onChange={(evt) => { setSearch(evt.target.value) }}
-          name='search' />
-        <button type='submit'>People search</button>
+          name='search'
+          className={css.input}
+        />
+        <button type='submit' className={css.button}>People search</button>
       </form>
 
       {isLoading && <Loader />}

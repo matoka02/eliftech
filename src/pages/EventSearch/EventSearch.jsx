@@ -6,6 +6,7 @@ import { fetchAllEventsByQuery } from '../../mockAPI';
 import Loader from '../../components/Loader/Loader';
 import ListEvent from '../../components/ListEvent/ListEvent';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import css from './EventSearch.module.css';
 
 const EventSearch = () => {
   const [query, setQuery] = useState('');
@@ -55,16 +56,21 @@ const EventSearch = () => {
 
   return (
     <div>
-      <form onSubmit={(evt) => {
-        evt.preventDefault();
-        submitOwnerFilter(query)
-      }}>
+      <form
+        onSubmit={(evt) => {
+          evt.preventDefault();
+          submitOwnerFilter(query)
+        }}
+        className={css.form}
+      >
         <input
           type='text'
           value={query}
           onChange={(evt) => { setQuery(evt.target.value) }}
-          name='search' />
-        <button type='submit'>Event search</button>
+          name='search'
+          className={css.input}
+        />
+        <button type='submit' className={css.button}>Event search</button>
       </form>
 
       {isLoading && <Loader />}

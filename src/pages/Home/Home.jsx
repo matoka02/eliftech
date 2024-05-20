@@ -5,6 +5,7 @@ import Loader from '../../components/Loader/Loader';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import ListEvent from '../../components/ListEvent/ListEvent';
 import Pagination from '../../components/Pagination/Pagination';
+import css from './Home.module.css';
 
 const HomePage = () => {
   const [events, setEvents] = useState([]);
@@ -33,7 +34,7 @@ const HomePage = () => {
 
   return (
     <>
-      <h1>Home</h1>
+      <h1 className={css.title}>Home</h1>
       {isLoading && <Loader />}
       {events.length > 0 && <ListEvent events={events} />}
       {error && (
