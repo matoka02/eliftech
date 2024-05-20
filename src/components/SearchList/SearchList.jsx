@@ -1,8 +1,9 @@
 import People from '../People/People';
+import css from './SearchList.module.css';
 
 const SearchList = ({ people }) => {
   return (
-    <ul>
+    <ul className={css.list}>
       {people.length > 0 && people.map((item) => (
         <People
           key={item.id}

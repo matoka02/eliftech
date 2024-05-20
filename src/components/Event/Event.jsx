@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import { Link, useLocation } from 'react-router-dom';
 
 import EventModal from '../EventModal/EventModal';
+import css from './Event.module.css';
 
 const Event = ({ title, description, date, eventId }) => {
   Modal.setAppElement('#root');
@@ -23,17 +24,28 @@ const Event = ({ title, description, date, eventId }) => {
 
   return (
     <>
-      <div>
+      <div className={css.item}>
         <h2>{title}</h2>
         <p>{description}</p>
         <span>{date}</span>
-        <ul>
+        <ul className={css.btns}>
           <li>
-            <button type='button' onClick={handleClick}>Register</button>
+            <button
+              type='button'
+              onClick={handleClick}
+              className={css.clickBtn}
+            >
+              Register
+            </button>
           </li>
           <li>
             <Link to={`/event/${eventId}`} state={location}>
-              <button type='button'>View</button>
+              <button
+                type='button'
+                className={css.clickBtn}
+              >
+                View
+              </button>
             </Link>
           </li>
         </ul>

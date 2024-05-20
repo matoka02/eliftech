@@ -1,0 +1,48 @@
+.item {
+  padding: 10px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 4px 8px #0000001a, 0 0 0 2px #0000000d;
+  transition: box-shadow 0.3s ease;
+}
+
+.item:hover {
+  box-shadow: 0 8px 16px #00000033, 0 0 0 4px #0000001a;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns li{
+  list-style-type: none;
+}
+
+.clickBtn {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #be3455;
+  border: 2px solid #be3455;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.clickBtn:hover {
+  background-color: #6868ab;
+  border-color: #6868ab;
+}
+
+.clickBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #6868ab80;
+}

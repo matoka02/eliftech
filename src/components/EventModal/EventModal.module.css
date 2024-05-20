@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .formTitle {
@@ -12,12 +12,12 @@
 }
 
 .formField {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .formField label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   font-weight: bold;
 }
 
@@ -27,33 +27,33 @@
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .radioGroup {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .radioGroup label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .radioGroup input[type="radio"] {
-  margin-right: 5px;
+  margin-right: 4px;
 }
 
 .submitButton {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #be3455;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .submitButton:hover {
-  background-color: #0056b3;
+  background-color: #6868ab;
 }

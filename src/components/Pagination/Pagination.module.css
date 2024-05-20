@@ -1,0 +1,30 @@
+.list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.clickBtn {
+  display: inline-block;
+  border-radius: 40px;
+  background: #be3455;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.clickBtn:hover,
+.clickBtn:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #be3455;
+  }
+}

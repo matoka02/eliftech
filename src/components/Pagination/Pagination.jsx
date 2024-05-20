@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+
 import { totalPageNavigation } from '../../mockAPI';
+import css from './Pagination.module.css';
 
 const Pagination = ({ onPage }) => {
   const [arrayPage, setArrayPage] = useState([]);
@@ -16,10 +18,15 @@ const Pagination = ({ onPage }) => {
   }, []);
 
   return (
-    <ul>
+    <ul className={css.list}>
       {arrayPage.map((element) => (
-        <button key={element} onClick={() => onPage(element)}
-        >{element}</button>
+        <button
+        key={element}
+        onClick={() => onPage(element)}
+        className={css.clickBtn}
+        >
+          {element}
+          </button>
       ))}
     </ul>
   )
