@@ -6,16 +6,16 @@
   flex-direction: column;
   gap: 12px;
   border: 1px solid #dddddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px #0000001a, 0 0 0 2px #0000000d;
   transition: box-shadow 0.3s ease;
 }
 
 .item:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px #00000033, 0 0 0 4px #0000001a;
 }
 
 .icons {
-  color: green;
+  color: #008000;
   position: absolute;
   top: 30%;
   right: 4%;
