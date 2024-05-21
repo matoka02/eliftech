@@ -56,6 +56,7 @@ export const getInfoPeople = async (eventId) => {
 
 export const getSearchPeople = async (search) => {
   const response = await axios.get('/api/v1/events');
+  console.log(response);
   const data = response.data.map((element) => ({
     ...element,
     people: element.people.filter(
@@ -63,6 +64,6 @@ export const getSearchPeople = async (search) => {
     ),
 
   })).filter((element) => element.people.length > 0);
-  return data
+  return data;
 };
 

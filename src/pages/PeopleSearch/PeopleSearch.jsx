@@ -24,7 +24,7 @@ const PeopleSearch = () => {
         }
       });
     }
-    setParams({ searchEvent: newFilter });
+    setParams({ searchPeople: newFilter });
   };
 
   useEffect(() => {
@@ -81,7 +81,7 @@ const PeopleSearch = () => {
       </form>
 
       {isLoading && <Loader />}
-      {dataPeople.length > 0 && <SearchList events={dataPeople} />}
+      {dataPeople.length > 0 && <SearchList people={dataPeople} />}
       {error && (
         <ErrorMessage
           message={'Failed to search people. Please try again later.'}
