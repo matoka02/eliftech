@@ -7,7 +7,7 @@ const ListEvent = ({ events }) => {
       {events.length > 0 && events.map((event) => (
         <Event
           key={event.id}
-          title={event.id}
+          title={event.title}
           description={event.description}
           date={event.date}
           eventId={event.id}
