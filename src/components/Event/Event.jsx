@@ -21,19 +21,13 @@ const Event = ({ title, description, date, eventId }) => {
   const handleClick = () => {
     openModal();
   };
-
-  const dateOfEvents = new Date(date);
-  const year = dateOfEvents.getFullYear();
-  const month = dateOfEvents.getMonth() + 1;
-  const day = dateOfEvents.getDay() + 1;
-  const correctDateOfEvents = (day < 10 ? '0' + day.toString() + '.' : day.toString() + '.') + (month < 10 ? '0' + month.toString() : month.toString()) + '.' + year.toString();
-
+  
   return (
     <>
       <li className={css.item}>
         <h2>{title}</h2>
         <p>{description}</p>
-        <span>{correctDateOfEvents}</span>
+        <span>{date.split('T')[0]}</span>
         <ul className={css.btns}>
           <li>
             <button

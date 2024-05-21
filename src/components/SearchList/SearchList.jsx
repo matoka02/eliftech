@@ -9,7 +9,7 @@ const SearchList = ({ people }) => {
           key={item.id}
           title={item.title}
           description={item.description}
-          date={item.date}
+          date={item.date.split('T')[0]}
         />
       ))}
     </ul>
