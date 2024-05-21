@@ -60,7 +60,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path='/' element={<HomePage />} />
+        <Route path='/eliftech' element={<HomePage />} />
         <Route path='/event' element={<EventSearch />} />
         <Route path='/event/:eventId' element={<PeopleDetails />} />
         <Route path='/peopleSearch' element={<PeopleSearch />} />
